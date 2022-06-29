@@ -5,6 +5,7 @@
 //  Created by Stanly Shiyanovskiy on 28.06.2022.
 //
 
+import Firebase
 import SwiftUI
 
 @main
@@ -13,5 +14,9 @@ struct ChatAppApp: App {
         WindowGroup {
             RootView()
         }
+    }
+    
+    init() {
+        FirebaseApp.configure()
     }
 }
