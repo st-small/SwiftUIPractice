@@ -12,6 +12,9 @@ struct RootView: View {
     @State
     var selectedTab: Tabs = .contacts
     
+    @State
+    var isOnboarding = !AuthViewModel.isUserLoggedIn()
+    
     var body: some View {
         
         VStack {
@@ -23,6 +26,12 @@ struct RootView: View {
             
             CustomTabBar(selectedTab: $selectedTab)
         }
+        .fullScreenCover(isPresented: $isOnboarding) {
+            
+        } content: {
+            OnboardingContainerView(isOnboarding: $isOnboarding)
+        }
+
     }
 }
 
