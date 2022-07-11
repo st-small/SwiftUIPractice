@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		521AFD9E286E05E200CED0F4 /* CreateProfileTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521AFD9D286E05E200CED0F4 /* CreateProfileTextFieldStyle.swift */; };
+		521AFDA0286E0D5C00CED0F4 /* ContactsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521AFD9F286E0D5C00CED0F4 /* ContactsViewModel.swift */; };
 		52537628286B65CB00BB3C65 /* ChatAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52537627286B65CB00BB3C65 /* ChatAppApp.swift */; };
 		5253762A286B65CB00BB3C65 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52537629286B65CB00BB3C65 /* RootView.swift */; };
 		5253762C286B65CD00BB3C65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5253762B286B65CD00BB3C65 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		521AFD9D286E05E200CED0F4 /* CreateProfileTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileTextFieldStyle.swift; sourceTree = "<group>"; };
+		521AFD9F286E0D5C00CED0F4 /* ContactsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewModel.swift; sourceTree = "<group>"; };
 		52537624286B65CB00BB3C65 /* ChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52537627286B65CB00BB3C65 /* ChatAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAppApp.swift; sourceTree = "<group>"; };
 		52537629286B65CB00BB3C65 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				52B7B47B286CACB0006BBB19 /* AuthViewModel.swift */,
+				521AFD9F286E0D5C00CED0F4 /* ContactsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52B7B483286CB4AF006BBB19 /* PhoneNumberView.swift in Sources */,
+				521AFDA0286E0D5C00CED0F4 /* ContactsViewModel.swift in Sources */,
 				52537646286B6C6300BB3C65 /* CustomTabBar.swift in Sources */,
 				52B7B487286CB4D4006BBB19 /* CreateProfileView.swift in Sources */,
 				5253762A286B65CB00BB3C65 /* RootView.swift in Sources */,
