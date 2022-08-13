@@ -1,0 +1,79 @@
+//
+//  QuestionView.swift
+//  TriviaGameDemo
+//
+//  Created by Stanly Shiyanovskiy on 12.08.2022.
+//
+
+import SwiftUI
+
+struct QuestionView: View {
+    
+    @EnvironmentObject var triviaManager: TriviaManager
+    
+    var body: some View {
+        VStack(spacing: 40) {
+            HStack {
+                Text("Trivia Game")
+                    .lilacTitle()
+                
+                Spacer()
+                
+                Text("\(triviaManager.index + 1) out of \(triviaManager.length)")
+                    .foregroundColor(.accentColor)
+                    .fontWeight(.heavy)
+            }
+            
+            ProgressBar(progress: triviaManager.progress)
+            
+            VStack(alignment: .leading, spacing: 20) {
+                Text(triviaManager.question)
+                    .font(.system(size: 20))
+                    .bold()
+                    .foregroundColor(.gray)
+                
+                ForEach(triviaManager.answerChoices, id: \.id) { answer in
+                    AnswerRow(answer: answer)
+                        .environmentObject(triviaManager)
+                }
+            }
+            
+//            Button {
+//                triviaManager.goToNextQuestion()
+//            } label: {
+//                PrimaryButton(
+//                    text: "Next",
+//                    background: triviaManager.answerSelected ? Color.accentColor : Color(hue: 1, saturation: 0, brightness: 0.564, opacity: 0.327))
+//            }
+//            .disabled(!triviaManager.answerSelected)
+            
+            PrimaryButton(
+                text: "Next",
+                background: triviaManager.answerSelected ? Color.accentColor : Color(hue: 1, saturation: 0, brightness: 0.564, opacity: 0.327)
+            )
+            .disabled(!triviaManager.answerSelected)
+            .onTapGesture {
+                triviaManager.goToNextQuestion()
+            }
+            
+            Spacer()
+        }
+        .padding()
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(
+            Color(
+                red: 0.984313725490196,
+                green: 0.9294117647058824,
+                blue: 0.8470588235294118
+            )
+        )
+        .navigationBarHidden(true)
+    }
+}
+
+struct QuestionView_Previews: PreviewProvider {
+    static var previews: some View {
+        QuestionView()
+            .environmentObject(TriviaManager())
+    }
+}
